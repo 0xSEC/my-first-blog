@@ -2,6 +2,7 @@
 
 {% block content %}
 <div class="post">
+  <div class="admin_buttons">
   {% if post.published_date %}
   <div class="date">
     {{ post.published_date }}
@@ -13,6 +14,7 @@
   <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
   <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
   {% endif %}
+</div>
   <h1>{{ post.title }}</h1>
   <p>{{ post.text|linebreaksbr }}</p>
 </div>
